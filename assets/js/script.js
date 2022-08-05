@@ -13,16 +13,18 @@ if (iconHeader) {
     });
 }
 
+
 const select = document.querySelector('select');
 const allLang = ["en", "ua"];
 
-select.addEventListener('change', changeURLLanguage);
+select.addEventListener("change", changeURLLanguage);
 
 function changeURLLanguage() {
     let lang = select.value;
     location.href = window.location.pathname + "#" + lang;
     location.reload();
 }
+
 
 function changeLanguage() {
     let hash = window.location.hash;
@@ -34,7 +36,7 @@ function changeLanguage() {
     select.value = hash;
     document.querySelector('en_1').innerHTML = langArr['en_1'][hash];
     for (let key in langArr) {
-        let elem = document.querySelector('lng' + key);
+        let elem = document.querySelector(".lng" + key);
         if (elem) {
             elem.innerHTML = langArr[key][hash];
         }
@@ -42,5 +44,3 @@ function changeLanguage() {
 }
 
 changeLanguage();
-
-
