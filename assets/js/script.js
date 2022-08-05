@@ -13,25 +13,13 @@ if (iconHeader) {
     });
 }
 
-let langMen = document.querySelector('.menu__lang');
-let subMen = document.querySelector('.menu__sub-list');
-let enLng = document.querySelector('.menu__sub-enlang');
-let allLang = ['en', 'ua'];
+const select = document.querySelector('select');
+const allLang = ["en", "ua"];
 
-
-const toggleMenu = () => {
-    subMen.classList.toggle('_open');
-}
-
-langMen.addEventListener('click', e => {
-    e.stopPropagation();
-    toggleMenu();
-})
-
-enLng.addEventListener("change", changeURLLanguage);
+select.addEventListener('change', changeURLLanguage);
 
 function changeURLLanguage() {
-    let lang = enLng.value;
+    let lang = select.value;
     location.href = window.location.pathname + "#" + lang;
     location.reload();
 }
@@ -43,8 +31,8 @@ function changeLanguage() {
         location.href = window.location.pathname + "#en";
         location.reload();
     }
-    enLng.value = hash;
-    document.querySelector('.en1').innerHTML = langArr['en1'][hash];
+    select.value = hash;
+    document.querySelector('en_1').innerHTML = langArr['en_1'][hash];
     for (let key in langArr) {
         let elem = document.querySelector('lng' + key);
         if (elem) {
@@ -54,6 +42,5 @@ function changeLanguage() {
 }
 
 changeLanguage();
-
 
 

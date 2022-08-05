@@ -161,6 +161,18 @@ body ._lock {
   color: #1D1D1B;
 }
 
+.change__lang {
+  height: 50px;
+  width: 60px;
+  background-color: #fff;
+  border: 1px solid #3C7BFF;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: 700;
+  color: #3C7BFF;
+}
+
 /*------------------------AДАПТИВ--------------------------------- */
 @media screen and (max-width: 1180px) {
   .header__container {
