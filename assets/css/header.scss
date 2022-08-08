@@ -67,6 +67,10 @@ body ._lock {
     &__link a {
         color: #1D1D1B;
 
+        &:active {
+            color: #3C7BFF;
+        }
+
         &:hover {
             color: #3C7BFF;
         }
@@ -124,6 +128,7 @@ body ._lock {
         text-align: center;
         border-radius: 10px;
         z-index: 1000;
+        overflow: hidden;
     }
 
 }
@@ -136,6 +141,7 @@ body ._lock {
     background-color: #3C7BFF;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .menu__sub-ualang a {
@@ -145,25 +151,26 @@ body ._lock {
 .menu__sub-enlang {
     background-color: #fff;
     color: #1D1D1B;
-    border-radius: 15px;
-    padding: 9px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.menu__sub-enlang:hover {
+    background-color: #e5e7eb;
+    transition: all 0.3s ease 0s;
 }
 
 .menu__sub-enlang a {
     color: #1D1D1B;
 }
 
-.change__lang {
-    height: 50px;
-    width: 60px;
-    background-color: #fff;
-    border: 1px solid #3C7BFF;
-    font-size: 15px;
-    text-align: center;
-    border-radius: 15px;
-    font-weight: 700;
-    color: #3C7BFF;
+.menu__sub-enlang:hover a {
+    color: #fff;
 }
+
+
 
 
 
@@ -326,6 +333,8 @@ body ._lock {
     .menu__langhidden a {
         color: #3C7BFF;
     }
+
+
 }
 
 

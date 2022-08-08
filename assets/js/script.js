@@ -1,5 +1,6 @@
 "use strict"
 
+
 const iconHeader = document.querySelector('.header__icon');
 const menuBody = document.querySelector('.menu__body');
 const menuList = document.querySelector('.menu__list');
@@ -14,33 +15,14 @@ if (iconHeader) {
 }
 
 
-const select = document.querySelector('select');
-const allLang = ["en", "ua"];
+const showLang = document.querySelector('.menu__lang');
+const changeLang = document.querySelector('.menu__sub-list');
 
-select.addEventListener("change", changeURLLanguage);
 
-function changeURLLanguage() {
-    let lang = select.value;
-    location.href = window.location.pathname + "#" + lang;
-    location.reload();
+if (showLang) {
+    showLang.addEventListener("click", (e) => {
+        changeLang.classList.toggle('_open');
+    });
 }
 
 
-function changeLanguage() {
-    let hash = window.location.hash;
-    hash = hash.substr(1);
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + "#en";
-        location.reload();
-    }
-    select.value = hash;
-    document.querySelector('en_1').innerHTML = langArr['en_1'][hash];
-    for (let key in langArr) {
-        let elem = document.querySelector(".lng" + key);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
-        }
-    }
-}
-
-changeLanguage();
