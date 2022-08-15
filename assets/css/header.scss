@@ -64,16 +64,22 @@ body ._lock {
         position: relative;
     }
 
-    &__link a {
-        color: #1D1D1B;
-
-        &:active {
-            color: #3C7BFF;
-        }
+    &__link {
+        transition: all 0.3s ease 0s;
 
         &:hover {
             color: #3C7BFF;
         }
+    }
+
+    &__link a {
+        transition: all 0.3s ease 0s;
+        color: #1D1D1B;
+
+        &:hover {
+            color: #3C7BFF;
+        }
+
     }
 
     &__btn {
@@ -85,6 +91,7 @@ body ._lock {
         font-weight: 700;
         cursor: pointer;
         width: 150px;
+        transition: all 0.3s ease 0s;
 
         &:hover {
             background-color: #0040c9b1;
@@ -133,6 +140,40 @@ body ._lock {
 
 }
 
+
+.uashow._close {
+    display: none;
+}
+
+.enhidden {
+    display: none;
+}
+
+.enhidden._open {
+    display: block;
+}
+
+
+.uashowsmall._close {
+    display: none;
+}
+
+.enhiddensmall {
+    display: none;
+}
+
+.enhiddensmall._open {
+    display: block;
+}
+
+.menu__sub-enlang._chosen {
+    background-color: #3C7BFF;
+}
+
+.menu__sub-ualang._notchosen {
+    background-color: #e5e7eb;
+}
+
 .menu__sub-list._open {
     display: block;
 }
@@ -142,11 +183,10 @@ body ._lock {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-}
-
-.menu__sub-ualang a {
     color: #fff;
 }
+
+
 
 .menu__sub-enlang {
     background-color: #fff;
@@ -313,7 +353,7 @@ body ._lock {
     }
 
     .menu__list li {
-        margin: 20px 0px 20px 0px;
+        margin: 0px 0px 0px 0px;
         border-bottom: 1px solid #E5E5E5;
         padding: 20px 0px 20px 20px;
     }
@@ -334,11 +374,40 @@ body ._lock {
         color: #3C7BFF;
     }
 
+    .menu__sub-list {
+        display: none;
+        position: absolute;
+        top: 510px;
+        right: 0px;
+        margin: 0px;
+        text-align: center;
+        width: 100%;
+        height: 150px;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+        border-radius: 10px;
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    .menu__sub-ualang {
+        background-color: #3C7BFF;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        color: #fff;
+        margin: 0px;
+    }
+
+    .menu__sub-enlang {
+        background-color: #fff;
+        color: #1D1D1B;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
 
 }
-
-
-
-
-
-/*------------------------Відкриття бургера--------------------------------- */

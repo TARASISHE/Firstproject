@@ -16,24 +16,26 @@
                 <div class="header__container">
                     <div class="header__menu menu">
                         <div class="header__logo">
-                            <a href=""> <img src="./assets/img/Logo.png" alt=""></a>
+                            <a href="./index.html"><img src="./assets/img/Logo.png" alt=""></a>
                         </div>
                         <div class="header__icon">
                             <span></span>
                         </div>
                         <nav class="menu__body">
                             <ul class="menu__list">
-                                <li class="menu__link"><a href=" #">Головна</a></li>
-                                <li class="menu__link"><a href="#">Наші програми</a></li>
-                                <li class="menu__link"><a href="#">Про нас</a></li>
-                                <li class="menu__link"><a href="#">Наша місія</a></li>
-                                <li class="menu__link"><a href="#">Контакти</a></li>
-                                <button class="menu__btn">Хочу допомогти</button>
-                                <li class="menu__lang"><a href="#">UA</a></li>
-                                <li class="menu__langhidden"><a href="#">UA</a></li>
+                                <li class="menu__link " lang-key="en_1"><a href=" #">Головна</a></li>
+                                <li class="menu__link " lang-key="en_2"><a href="#">Наші програми</a></li>
+                                <li class="menu__link " lang-key="en_3"><a href="#">Про нас</a></li>
+                                <li class="menu__link " lang-key="en_4"><a href="#">Наша місія</a></li>
+                                <li class="menu__link " lang-key="en_5"><a href="#">Контакти</a></li>
+                                <button class="menu__btn " lang-key="en_6">Хочу допомогти</button>
+                                <li class="menu__lang"><a class="uashow" href="#">UA</a><a class="enhidden"
+                                        href="#">EN</a></li>
+                                <li class="menu__langhidden"><a class="uashowsmall" href="#">UA</a><a
+                                        class="enhiddensmall" href="#">EN</a></li>
                                 <ul class="menu__sub-list">
-                                    <li class="menu__sub-ualang"><a href="#">UA</a></li>
-                                    <li class="menu__sub-enlang"><a href="#">EN</a></li>
+                                    <li data-lang="ua" id="ukrbtn" class="menu__sub-ualang"><a href="#">UA</a></li>
+                                    <li data-lang="en" id="enbtn" class="menu__sub-enlang"><a href="#">EN</a></li>
                                 </ul>
                             </ul>
                         </nav>
@@ -41,9 +43,128 @@
                 </div>
             </header>
         </section>
+        <section>
+            <main class="content">
+                <div class="container">
+                    <div class="blockimg">
+                        <h3 class="blockimg__title" lang-key="en_7">Волонтерьска спільнота</h3>
+                        <p class="blockimg__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo
+                            consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint
+                            occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p class="blockimg__hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <h2 class="title" lang-key="en_8">Благородно тільки те, що безкорисливо</h2>
+                    <div class="helpblock">
+                        <div class="helpblock__row">
+                            <button class="helpblock__btn" lang-key="en_6"><a href="">Хочу допомогти</a></button>
+                            <button class="helpblock__btnpopup" lang-key="en_9">Отримати допомогу</button>
+                        </div>
+                    </div>
+                    <h2 class="title" lang-key="en_2">Наші програми</h2>
+                    <div class="programblock">
+                        <div class="programblock__row">
+                            <div class="programblock__itemmilitary">
+                                <div class="programblock__text" lang-key="en_13">Допомога військовим</div>
+                            </div>
+                            <div class="programblock__itempublic">
+                                <div class="programblock__text" lang-key="en_14">Допомога населенню</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="title" lang-key="en_15">Документи</h2>
+                    <div class="documentblock">
+                        <div class="documentblock__body">
+                            <div class="documentblock__row">
+                                <div class="documentblock__card hover ">
+                                    <img class="documentblock__img " src="./assets/img/1650650268-payment-en-1.jpg"
+                                        alt="">
+                                </div>
+                                <div class="documentblock__card hover ">
+                                    <img class="documentblock__img " src="./assets/img/1650650287-payment-en-2.jpg"
+                                        alt="">
+                                </div>
+                                <div class="documentblock__card hover">
+                                    <img class="documentblock__img " src="./assets/img/1650650300-payment-en-3.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="title" lang-key="en_16">Звіти</h2>
+                    <div class="reportblock">
+                        <div class="reportblock__body">
+                            <div class="reportblock__row">
+                                <button class="reportblock__btn"><a href="">Telegram</a></button>
+                                <p class="reportblock__text" lang-key="en_17">Ми активно ведемо наш телеграм канал для
+                                    того,щоб ви могли стежити за роботою нашого фонду</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <section>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__row">
+                        <ul class="footer__menu ">
+                            <li class="footer__link" lang-key="en_2"><a href="">Наші програми</a></li>
+                            <li class="footer__link" lang-key="en_3"><a href="">Про нас</a></li>
+                            <li class="footer__link" lang-key="en_4"><a href="">Наша місія</a></li>
+                            <li class="footer__link" lang-key="en_5"><a href="">Контакти</a></li>
+                        </ul>
+                        <div class="footer__social social">
+                            <p class="social__title" lang-key="en_18">Ми у соцмережах:</p>
+                            <ul class="social__row">
+                                <li class="social__link"><a href=""><img src="./assets/img/inst.svg" alt=""></a></li>
+                                <li class="social__link"><a href=""><img src="./assets/img/facebook.svg" alt=""></a>
+                                </li>
+                                <li class="social__link"><a href=""><img src="./assets/img/telegram.svg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        <a class="footer__email" href="">sakeoflifeua@gmail.com</a>
+                        <p class="footer__fond">БО "БФ "УКРАЇНА - ЦЕ ВСІ МИ"</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
     </div>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/lang.js"></script>
+    <div class="popup" id="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__title" lang-key="en_9">Отримати допомогу</div>
+                <input class="user__name" type="text" name="user__name" id="username" placeholder="Ваше ім'я*"
+                    lang-key="en_10">
+                <input class="user__email" type="email" name="user__email" id="useremail" placeholder="Ваш e-mail*">
+                <input class="user__tel" type="tel" name="user__tel" id="usertel" placeholder="Ваш телефон*">
+                <textarea class="user__problem" name="problem" id="userprob"
+                    placeholder=" Опишіть Вашу проблему*"></textarea>
+                <button class="submit" lang-key="en_11">Відправити</button>
+                <button class="cancel" lang-key="en_12">Скасувати</button>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slider__container">
+            <img src="./assets/img/sliderclose.png" alt="" class="slider__close">
+            <img src="./assets/img/sliderleft.png" alt="" class="slider__left">
+            <img src="./assets/img/sliderright.png" alt="" class="slider__right">
+            <div class="slider__body"></div>
+        </div>
+    </div>
+    <script type="module" src="./assets/js/script.js"></script>
 </body>
 
 </html>
