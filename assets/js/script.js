@@ -85,6 +85,7 @@ function changeLang(lang) {
         }
     });
 }
+
 let username = document.getElementById("username");
 let useremail = document.getElementById("useremail");
 let usertel = document.getElementById("usertel");
@@ -105,7 +106,6 @@ ukrBtn.addEventListener('click', () => {
     usertel.placeholder = 'Ваш телефон*';
     userprob.placeholder = 'Опишіть Вашу проблему*';
 })
-
 
 /*-------------------------Popup-------------------------------------*/
 
@@ -130,6 +130,7 @@ popupClose.addEventListener("click", (e) => {
     popupContent.classList.remove('_open');
     body.classList.remove('_lock');
     document.body.style.marginRight = `0px`;
+    calcScroll()
 });
 
 function calcScroll() {
@@ -168,6 +169,7 @@ const sliderBody = document.querySelector('.slider__body');
 const sliderBtnLeft = document.querySelector('.slider__left');
 const sliderBtnRight = document.querySelector('.slider__right');
 const sliderClose = document.querySelector('.slider__close');
+const numbers = document.querySelector('.slider__pages');
 
 let cardIndex = -1;
 let pictureFull;
@@ -181,6 +183,8 @@ for (const card of cards) {
         slider.classList.add('_open');
         body.classList.add('_lock');
         document.body.style.marginRight = `${scroll}px`;
+        calcScroll()
+        changeNumbers()
     });
 }
 
@@ -188,12 +192,14 @@ for (const card of cards) {
 sliderBtnLeft.addEventListener("click", (event) => {
     event.preventDefault();
     changePicture("left");
+    changeNumbers("left");
 })
 
 
 sliderBtnRight.addEventListener("click", (event) => {
     event.preventDefault();
     changePicture("right");
+    changeNumbers("right");
 })
 
 function changePicture(dir) {
@@ -216,6 +222,14 @@ function changePicture(dir) {
 
 }
 
+sliderBody.addEventListener("click", (e) => {
+    event.preventDefault();
+    slider.classList.remove('_open');
+    pictureFull.remove();
+    body.classList.remove("_lock");
+    document.body.style.marginRight = `0px`;
+})
+
 sliderClose.addEventListener("click", (event) => {
     event.preventDefault();
     slider.classList.remove('_open');
@@ -223,5 +237,19 @@ sliderClose.addEventListener("click", (event) => {
     body.classList.remove("_lock");
     document.body.style.marginRight = `0px`;
 });
+
+function changeNumbers() {
+    if (cardIndex === 0) {
+        numbers.textContent = '1/3';
+    } if (cardIndex === 1) {
+        numbers.textContent = '2/3';
+    } if (cardIndex === 2) {
+        numbers.textContent = '3/3';
+    }
+}
+
+/*
+додати перевірку якщо цей елемент є input то міняємо не textContent a placeholder
+*/
 
 

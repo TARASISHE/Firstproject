@@ -382,6 +382,7 @@ input::-webkit-input-placeholder {
     }
 }
 
+
 /*-------------------------Popup-------------------------------------*/
 .popup {
     position: fixed;
@@ -683,6 +684,7 @@ input::-webkit-input-placeholder {
 }
 
 
+
 /*-------------------------Адаптив-------------------------------------*/
 
 
@@ -735,8 +737,8 @@ input::-webkit-input-placeholder {
 
     &__close {
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 5px;
+        right: 5px;
         width: 30px;
         height: 30px;
     }
@@ -744,13 +746,19 @@ input::-webkit-input-placeholder {
     &__left {
         position: absolute;
         top: 50%;
-        left: 20px;
+        left: 0px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
     }
 
     &__right {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 0px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
     }
 
     &__body {
@@ -759,12 +767,22 @@ input::-webkit-input-placeholder {
         justify-content: center;
         align-items: center;
     }
+
 }
 
 .slider._open {
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease 0s;
+}
+
+
+.slider__pages {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #fff;
 }
 
 

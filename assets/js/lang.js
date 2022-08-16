@@ -9,7 +9,7 @@ export default {
     },
     "en_3": {
         "ua": "Про нас",
-        "en": "Anout us"
+        "en": "About us"
     },
     "en_4": {
         "ua": "Наша місія",
