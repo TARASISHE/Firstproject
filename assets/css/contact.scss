@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url(./footer.css);
+@import url(./header.css);
+
+*,
+*::before,
+*::after {
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto';
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #C4C4C4;
+}
+
+::-webkit-input-placeholder {
+    color: #C4C4C4;
+}
+
+:-moz-placeholder {
+    color: #C4C4C4;
+}
+
+::-moz-placeholder {
+    color: #C4C4C4;
+}
+
+:-ms-input-placeholder {
+    color: #C4C4C4;
+}
+
+/*------------------  Block --------------------------------------*/
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.block {
+    margin: 170px 0px 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+}
+
+.table {
+    width: 100%;
+
+    &__title {
+        color: #3C7BFF;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        border-top: 1px solid #C4C4C4;
+        border-left: 1px solid #C4C4C4;
+        border-right: 1px solid #C4C4C4;
+
+
+    }
+
+    &__left {
+        width: 33.333333%;
+        padding: 20px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        border-right: 1px solid #C4C4C4;
+    }
+
+    &__right {
+        padding: 20px;
+        flex: 1 1 0;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+
+
+    }
+
+    &__rowend {
+        display: flex;
+        width: 100%;
+        border-top: 1px solid #C4C4C4;
+        border-left: 1px solid #C4C4C4;
+        border-right: 1px solid #C4C4C4;
+        border-bottom: 1px solid #C4C4C4;
+    }
+}
+
+.rounded {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.roundedend {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.border {
+    border-top: 1px solid #C4C4C4;
+    border-left: 1px solid #C4C4C4;
+    border-right: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+
+.title {
+    color: #3C7BFF;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    margin: 30px 0px;
+}
+
+.form {
+    width: 100%;
+
+    &__row {
+        display: flex;
+        gap: 40px;
+        width: 100%;
+    }
+
+    &__name {
+        flex: 1 1 33.33333%;
+        height: 60px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 30px 10px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+    }
+
+    &__email {
+        flex: 1 1 33.33333%;
+        height: 60px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 30px 10px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+    }
+
+    &__tel {
+        flex: 1 1 33.33333%;
+        height: 60px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 30px 10px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+    }
+
+    &__problem {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 30px;
+        padding: 30px 10px;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+    }
+}
+
+.submit {
+    min-width: 350px;
+    height: 50px;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.submit:hover {
+    background-color: #3C7BFF;
+}
+
+/*------------------  Block --------------------------------------*/
+
+
+/*-------------------------Адаптив-------------------------------------*/
+
+@media screen and (max-width:1180px) {
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .block {
+        margin: 170px 0px 50px 0px;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 50px;
+    }
+
+    .form__row {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .form__problem {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .container {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form__row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .form__name {
+        margin-bottom: 15px;
+    }
+
+    .form__email {
+        margin-bottom: 15px;
+    }
+
+    .form__tel {
+        margin-bottom: 15px;
+    }
+
+    .title {
+        color: #3C7BFF;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 38px;
+        margin: 10px 0px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .form {
+        padding: 15px;
+    }
+
+    .block {
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .table__left {
+        padding: 10px;
+        width: 45%;
+    }
+
+    .table__right {
+        padding: 10px;
+
+    }
+}

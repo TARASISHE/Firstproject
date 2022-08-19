@@ -66,6 +66,7 @@ body ._lock {
 
     &__link {
         transition: all 0.3s ease 0s;
+        cursor: pointer;
 
         &:hover {
             color: #3C7BFF;
@@ -96,6 +97,11 @@ body ._lock {
         &:hover {
             background-color: #0040c9b1;
         }
+
+    }
+
+    &__btn a {
+        color: #fff;
     }
 
     &__lang {

@@ -76,6 +76,7 @@ body ._lock {
 .menu__link {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
 
 .menu__link:hover {
@@ -107,6 +108,10 @@ body ._lock {
 
 .menu__btn:hover {
   background-color: #0040c9b1;
+}
+
+.menu__btn a {
+  color: #fff;
 }
 
 .menu__lang {

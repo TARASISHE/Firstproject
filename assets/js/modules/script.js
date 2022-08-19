@@ -1,5 +1,6 @@
 "use strict"
 
+import lang from "./lang.js";
 import langArr from "./lang.js"
 
 /*--------------------------------Burger----------------------------------*/
@@ -53,6 +54,7 @@ function checkOpenList() {
 
 const langListener = (e) => {
     const lang = e.target.closest('LI').getAttribute('data-lang');
+    localStorage.setItem("storageLang", lang)
     subList.classList.remove('_open');
     enHidden.classList.toggle('_open');
     uaShow.classList.toggle('_close');
@@ -60,9 +62,14 @@ const langListener = (e) => {
     uaShowSmall.classList.toggle('_close');
     changeLang(lang);
     markLangEng();
-
 };
 
+
+
+
+
+// что б в cаб ліст відображався змінена мова
+//розділити файли по змісту попап к попапу і тд
 
 function markLangEng() {
     if (enHidden.classList.contains('_open')) {
@@ -82,6 +89,7 @@ function changeLang(lang) {
         let elemForTrans = document.querySelectorAll(`[lang-key="${langKey}"]`);
         for (let element of elemForTrans) {
             element.textContent = langArr[langKey][lang];
+
         }
     });
 }
@@ -117,7 +125,6 @@ const popupClose = document.querySelector('.cancel');
 let scroll = calcScroll();
 
 popupBtn.addEventListener("click", (e) => {
-    e.preventDefault
     popup.classList.add('_open');
     popupContent.classList.add('_open');
     body.classList.add('_lock');
@@ -125,7 +132,6 @@ popupBtn.addEventListener("click", (e) => {
 });
 
 popupClose.addEventListener("click", (e) => {
-    e.preventDefault
     popup.classList.remove('_open');
     popupContent.classList.remove('_open');
     body.classList.remove('_lock');
@@ -247,9 +253,4 @@ function changeNumbers() {
         numbers.textContent = '3/3';
     }
 }
-
-/*
-додати перевірку якщо цей елемент є input то міняємо не textContent a placeholder
-*/
-
 
