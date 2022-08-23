@@ -142,12 +142,34 @@ a {
 
 /*------------------ Adaptiv --------------------------------------*/
 @media screen and (max-width: 1180px) {
+  .footer__container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
   .menu > li {
     margin: 10px 0px;
   }
 }
 
+@media screen and (max-width: 850px) {
+  .footer__container {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer__container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 540px) {
+  .footer__container {
+    max-width: none;
+    margin: 0;
+  }
   .footer {
     height: 400px;
   }

@@ -203,12 +203,7 @@ input::-webkit-input-placeholder {
     }
 }
 
-@media screen and (max-width:640px) {
-    .container {
-        max-width: 375px;
-        margin: 0 auto;
-    }
-}
+@media screen and (max-width:640px) {}
 
 /*------------------Help Block --------------------------------------*/
 .title {
@@ -292,7 +287,7 @@ input::-webkit-input-placeholder {
         min-width: 250px;
     }
 
-    .helpblock__btn a {
+    .helpblock__btn {
         font-size: 26px;
         line-height: 38px;
     }
@@ -361,17 +356,18 @@ input::-webkit-input-placeholder {
 
     .helpblock {
         margin-top: 30px;
+        padding: 0px 15px;
     }
 
     .helpblock__btn {
-        min-width: 300px;
+        min-width: 100%;
         height: 70px;
         font-size: 24px;
         padding: 0px 25px;
     }
 
     .helpblock__btnpopup {
-        min-width: 300px;
+        min-width: 100%;
         height: 70px;
         font-size: 24px;
         background-color: #fff;
@@ -396,6 +392,7 @@ input::-webkit-input-placeholder {
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
+    z-index: 4;
 }
 
 .popup._open {
@@ -554,6 +551,11 @@ input::-webkit-input-placeholder {
         align-items: flex-end;
         transition: all 0.5s ease 0s;
         border-radius: 10px;
+        color: #fff;
+        padding: 20px;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 50px;
 
         &:hover {
             transform: scale(0.9);
@@ -571,19 +573,15 @@ input::-webkit-input-placeholder {
         align-items: flex-end;
         transition: all 0.5s ease 0s;
         border-radius: 10px;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 50px;
+        color: #fff;
+        padding: 20px;
 
         &:hover {
             transform: scale(0.9);
         }
-    }
-
-    &__text {
-        color: #fff;
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 50px;
-        padding: 20px;
-
     }
 }
 
@@ -605,11 +603,15 @@ input::-webkit-input-placeholder {
     }
 
     .programblock__itemmilitary {
-        min-height: 300px;
+        min-height: 250px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .programblock__itempublic {
-        min-height: 300px;
+        min-height: 250px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .programblock__text {
@@ -628,11 +630,13 @@ input::-webkit-input-placeholder {
 @media screen and (max-width:540px) {
 
     .programblock__itemmilitary {
-        min-height: 250px;
+        min-height: 200px;
+        width: 100%;
     }
 
     .programblock__itempublic {
-        min-height: 250px;
+        min-height: 200px;
+        width: 100%;
     }
 
     .programblock__text {
@@ -708,7 +712,17 @@ input::-webkit-input-placeholder {
         width: 25%;
         height: 25%;
     }
+
 }
+
+@media screen and (max-width:540px) {
+    .documentblock {
+        padding: 0px 5px;
+    }
+
+}
+
+
 
 /*-------------------------Gallery-------------------------------------*/
 
@@ -724,6 +738,7 @@ input::-webkit-input-placeholder {
     visibility: hidden;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 4;
 
     &__container {
         min-height: 100%;
@@ -737,28 +752,28 @@ input::-webkit-input-placeholder {
 
     &__close {
         position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 30px;
-        height: 30px;
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
     }
 
     &__left {
         position: absolute;
         top: 50%;
-        left: 0px;
+        left: 10px;
         cursor: pointer;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 
     &__right {
         position: absolute;
         top: 50%;
-        right: 0px;
+        right: 10px;
         cursor: pointer;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 
     &__body {
@@ -785,6 +800,17 @@ input::-webkit-input-placeholder {
     color: #fff;
 }
 
+@media screen and (max-width:540px) {
+    .slider__left {
+        left: 5px;
+    }
+
+    .slider__right {
+        right: 5px;
+    }
+
+
+}
 
 /*-------------------------Report Block-------------------------------------*/
 .reportblock {
@@ -808,7 +834,7 @@ input::-webkit-input-placeholder {
     &__btn {
         background-color: #3C7BFF;
         border: none;
-        width: 20%;
+        width: 250px;
         height: 60px;
         border-radius: 10px;
         color: #fff;
@@ -830,6 +856,9 @@ input::-webkit-input-placeholder {
 
     }
 
+    &__linktg {
+        padding: 12px 55px;
+    }
 
     &__text {
         max-width: 800px;
@@ -849,7 +878,7 @@ input::-webkit-input-placeholder {
     }
 
     .reportblock__btn {
-        width: 30%;
+        width: 250px;
         background-position: 200px 15px;
 
     }
@@ -869,8 +898,8 @@ input::-webkit-input-placeholder {
     }
 
     .reportblock__btn {
-        width: 35%;
-        background-position: 180px 15px;
+        width: 250px;
+        background-position: 185px 15px;
         order: 2;
         margin-top: 20px;
     }
@@ -899,8 +928,8 @@ input::-webkit-input-placeholder {
     }
 
     .reportblock__btn {
-        width: 52%;
-        background-position: 155px 15px;
+        width: 250px;
+        background-position: 185px 15px;
         order: 2;
         margin-top: 20px;
     }
@@ -910,4 +939,11 @@ input::-webkit-input-placeholder {
         line-height: 20px;
         padding: 0px 10px;
     }
+}
+
+@media screen and (max-width:540px) {
+    .reportblock {
+        padding: 0px 5px;
+    }
+
 }

@@ -7,6 +7,7 @@ const sliderBtnRight = document.querySelector('.slider__right');
 const sliderClose = document.querySelector('.slider__close');
 const numbers = document.querySelector('.slider__pages');
 let scroll = calcScroll();
+const body = document.querySelector('body');
 
 let cardIndex = -1;
 let pictureFull;
