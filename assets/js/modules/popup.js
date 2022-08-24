@@ -27,8 +27,6 @@ document.addEventListener("keydown", (e) => {
         popup.classList.remove('_open');
         popupContent.classList.remove('_open');
         body.classList.remove('_lock');
-        slider.classList.remove('_open');
-        pictureFull.remove();
         document.body.style.marginRight = `0px`;
     }
 });

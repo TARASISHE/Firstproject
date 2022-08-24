@@ -106,6 +106,10 @@ const langArr = {
         "ua": "Честність",
         "en": "Honesty",
     },
+    "en_25": {
+        "ua": "Напишіть нам",
+        "en": "Write us",
+    }
 }
 
 if (menuLang) {

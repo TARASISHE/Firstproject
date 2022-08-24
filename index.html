@@ -71,7 +71,7 @@
                     <h2 class="title" lang-key="en_8">Благородно тільки те, що безкорисливо</h2>
                     <div class="helpblock">
                         <div class="helpblock__row">
-                            <button class="helpblock__btn" lang-key="en_6"><a href="">Хочу допомогти</a></button>
+                            <button class="helpblock__btn" lang-key="en_6">Хочу допомогти</button>
                             <button class="helpblock__btnpopup" lang-key="en_9">Отримати допомогу</button>
                         </div>
                     </div>
@@ -151,14 +151,14 @@
     </div>
     <div class="popup" id="popup">
         <div class="popup__body">
-            <form action="" class="popup__content">
+            <form id="form" class="popup__content">
                 <div class="popup__title" lang-key="en_9">Отримати допомогу</div>
-                <input required class="user__name" type="text" name="user__name" id="username" placeholder="Ваше ім'я*"
+                <input class="user__name _req" type="text" name="user__name" id="username" placeholder="Ваше ім'я*"
                     lang-key="en_10">
-                <input required class="user__email" type="email" name="user__email" id="useremail"
+                <input class="user__email _req _email" type="email" name="user__email" id="useremail"
                     placeholder="Ваш e-mail*">
-                <input required class="user__tel" type="tel" name="user__tel" id="usertel" placeholder="Ваш телефон*">
-                <textarea required class="user__problem" name="problem" id="userprob"
+                <input class="user__tel _req" type="tel" name="user__tel" id="usertel" placeholder="Ваш телефон*">
+                <textarea class="user__problem _req" name="problem" id="userprob"
                     placeholder=" Опишіть Вашу проблему*"></textarea>
                 <button class="submit" lang-key="en_11">Відправити</button>
                 <button class="cancel" lang-key="en_12">Скасувати</button>

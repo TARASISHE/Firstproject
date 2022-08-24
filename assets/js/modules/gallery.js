@@ -100,3 +100,12 @@ function calcScroll() {
 
     return scrollWidth;
 }
+
+document.addEventListener("keydown", (e) => {
+    if (e.which == 27) {
+        slider.classList.remove('_open');
+        body.classList.remove('_lock');
+        pictureFull.remove();
+        document.body.style.marginRight = `0px`;
+    }
+});

@@ -418,6 +418,7 @@ input::-webkit-input-placeholder {
 }
 
 .popup__content {
+    position: relative;
     background-color: #fff;
     max-width: 700px;
     display: flex;
@@ -429,7 +430,28 @@ input::-webkit-input-placeholder {
     border-radius: 10px;
     transform: translate(0px, -100px);
     opacity: 0;
+}
 
+.popup__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/loading.gif);
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.popup__content._sending::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .popup__title {
@@ -453,6 +475,10 @@ input::-webkit-input-placeholder {
     border-radius: 10px;
 }
 
+.user__name._error {
+    box-shadow: 0 0 15px red;
+}
+
 .user__email {
     min-width: 350px;
     height: 60px;
@@ -464,6 +490,11 @@ input::-webkit-input-placeholder {
     border: 1px solid #C4C4C4;
     border-radius: 10px;
 }
+
+.user__email._error {
+    box-shadow: 0 0 15px red;
+}
+
 
 .user__tel {
     min-width: 350px;
@@ -477,6 +508,10 @@ input::-webkit-input-placeholder {
     border-radius: 10px;
 }
 
+.user__tel._error {
+    box-shadow: 0 0 15px red;
+}
+
 .user__problem {
     min-width: 350px;
     height: 150px;
@@ -488,6 +523,10 @@ input::-webkit-input-placeholder {
     line-height: 24px;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
+}
+
+.user__problem._error {
+    box-shadow: 0 0 15px red;
 }
 
 .submit {
@@ -526,6 +565,8 @@ input::-webkit-input-placeholder {
     border: 1px solid #0249e2cf;
     color: #0249e2cf;
 }
+
+
 
 /*-----------------Programm Block --------------------------------------*/
 
