@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('form');
-
-    try {
-        form.addEventListener('submit', formSend);
-        async function formSend(e) {
+    form.addEventListener('submit', formSend);
+    async function formSend(e) {
+        try {
             e.preventDefault();
 
             let error = formValidate(form);
@@ -16,16 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     method: 'POST',
                     body: formData
                 });
-                if (response.ok) {
-                    let json = await response.json();
-                    form.reset();
-                }
+                let json = await response.json();
+                form.reset();
             }
+        } catch {
+            console.error(e);
         }
-    } catch {
-        alert("Error");
     }
-
 
     function formValidate(form) {
         let error = 0;
