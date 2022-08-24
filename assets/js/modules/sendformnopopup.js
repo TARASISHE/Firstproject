@@ -26,7 +26,4 @@ document.addEventListener("DOMContentLoaded", function () {
             btnSend.classList.remove('_sending');
         }
     }
-
-
-
 });
