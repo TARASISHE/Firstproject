@@ -314,6 +314,7 @@ body ._lock {
         top: 0;
         right: 0;
         opacity: 0;
+        visibility: hidden;
         height: 100%;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.3);
@@ -323,6 +324,7 @@ body ._lock {
 
     .menu__body._open {
         opacity: 1;
+        visibility: visible;
         pointer-events: all;
     }
 
