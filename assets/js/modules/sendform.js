@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     let json = await response.json();
                     form.reset();
                 }
-            } else {
-                alert("Enter obligatory fields")
             }
         }
     } catch {
