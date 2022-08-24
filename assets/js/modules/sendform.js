@@ -25,9 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset();
                 popup.classList.remove('_open');
                 body.classList.remove('_lock');
+                alert("Succesful sended email");
             }
-        } catch {
-            console.error(e);
+        } catch (error) {
+            console.error(error);
         } finally {
             btnLoad.classList.remove('_sending');
             btnSend.classList.remove('_sending');
