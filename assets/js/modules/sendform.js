@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('form');
+    const popup = document.querySelector('.popup');
+    const popupContent = document.querySelector('.popup__content');
+    const btnSend = document.querySelector('.submit');
+    const btnLoad = document.querySelector('.loading');
     form.addEventListener('submit', formSend);
     async function formSend(e) {
         try {
@@ -10,13 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
             let formData = new FormData(form);
 
             if (error === 0) {
-                //form.classList.add('_sending');
+                // popupContent.classList.add('_sending');
+                btnLoad.classList.add('_sending');
+                btnSend.classList.add('_sending');
                 let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
                     method: 'POST',
                     body: formData
                 });
+                popup
                 let json = await response.json();
+                popupContent.classList.add('_sending');
                 form.reset();
+                popup.classList.remove('_open');
             }
         } catch {
             console.error(e);

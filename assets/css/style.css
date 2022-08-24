@@ -596,6 +596,28 @@ input::-webkit-input-placeholder {
   color: #fff;
 }
 
+.submit._sending {
+  display: none;
+}
+
+.loading {
+  display: none;
+  min-width: 350px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #3C7BFF;
+  border-radius: 10px;
+  background-image: url(../img/loading.gif);
+  background-repeat: no-repeat;
+  background-size: 45px;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.loading._sending {
+  display: block;
+}
+
 .cancel {
   min-width: 350px;
   height: 50px;
