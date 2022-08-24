@@ -179,16 +179,17 @@
                     <h2 class="title" lang-key="en_25">Напишіть нам</h2>
                     <form action="" id="form" class="form">
                         <div class="form__row">
-                            <input class="form__name _req" type="text" name="user__name" id="username"
+                            <input required class="form__name _req" type="text" name="user__name" id="username"
                                 placeholder="Ваше ім'я*" lang-key="en_10">
-                            <input class="form__email _req" type="email" name="user__email" id="useremail"
+                            <input required class="form__email _req" type="email" name="user__email" id="useremail"
                                 placeholder="Ваш e-mail*">
-                            <input class="form__tel _req" type="tel" name="user__tel" id="usertel"
+                            <input required class="form__tel _req" type="tel" name="user__tel" id="usertel"
                                 placeholder="Ваш телефон*">
                         </div>
-                        <textarea class="form__problem _req" name="problem" id="userprob"
+                        <textarea required class="form__problem _req" name="problem" id="userprob"
                             placeholder=" Опишіть Вашу проблему*"></textarea>
-                        <button class="submit" lang-key="en_11">Надіслати</button>
+                        <button class="submit" lang-key="en_11">Відправити</button>
+                        <button class="loading"></button>
                     </form>
                 </div>
             </main>

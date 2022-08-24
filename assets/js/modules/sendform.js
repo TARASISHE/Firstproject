@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('form');
     const popup = document.querySelector('.popup');
-    const popupContent = document.querySelector('.popup__content');
     const btnSend = document.querySelector('.submit');
     const btnLoad = document.querySelector('.loading');
+    const body = document.querySelector('body');
     form.addEventListener('submit', formSend);
     async function formSend(e) {
         try {
@@ -21,14 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     method: 'POST',
                     body: formData
                 });
-                popup
                 let json = await response.json();
-                popupContent.classList.add('_sending');
                 form.reset();
                 popup.classList.remove('_open');
+                body.classList.remove('_lock');
             }
         } catch {
             console.error(e);
+        } finally {
+            btnLoad.classList.remove('_sending');
+            btnSend.classList.remove('_sending');
         }
     }
 
